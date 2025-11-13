@@ -61,6 +61,7 @@ class Weapon (db.Model):
     material: Mapped[str] = mapped_column(String)
     description: Mapped[str] = mapped_column(String (50))
     owner: Mapped[str] = mapped_column(String)
+    
 
     characteres: Mapped[List["Character"]] = relationship (back_populates= "weapons", secondary= character_weapon)
 
