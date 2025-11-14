@@ -8,8 +8,8 @@ db = SQLAlchemy()
 
 character_weapon = db.Table('characteres_weapons', 
     db.Column('id', db.Integer, primary_Key=True),
-    db.Column('character_id', db.Integer, db.ForeignKey("characteres_id"), nullable=False),
-    db.Column('weapon_id', db.Integer, db.ForeignKey("weapons_id"), nullable=False))
+    db.Column('character_id', db.Integer, db.ForeignKey("characteres.id"), nullable=False),
+    db.Column('weapon_id', db.Integer, db.ForeignKey("weapons.id"), nullable=False))
 
 class User(db.Model):
     __tablename__ = 'users'
